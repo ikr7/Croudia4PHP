@@ -20,7 +20,7 @@ setAccessToken()…callbackに渡される code というGETパラメータを�
 GET_statuses_public_timeline()  
 GET_statuses_home_timeline()  
 GET_statuses_user_timeline()  
-GET_statuses_mentions()  
+GET_statuses_mentions()…なぜだか404が返ってきて取得できません、いつかどうにかする  
 GET_statuses_show()  
 
 POST_statuses_update()  
