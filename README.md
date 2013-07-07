@@ -10,3 +10,22 @@ Croudia API をPHPで扱うためのライブラリです。
 
 ##つかいかた
 
+example見ればわかる
+
+##メソッド一覧
+
+*getAuthorizeURL()…認証URLを返します
+*setAccessToken()…callbackに渡される code というGETパラメータを渡してアクセストークンをCroudia4PHPオブジェクトセットします
+
+*GET_statuses_public_timeline()
+*GET_statuses_home_timeline()
+*GET_statuses_user_timeline()
+*GET_statuses_mentions()
+*GET_statuses_show()
+
+*POST_statuses_update()
+*POST_statuses_destroy()
+
+*POST_favorites_create()
+*POST_favorites_destroy()
+
