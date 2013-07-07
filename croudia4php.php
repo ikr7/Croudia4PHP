@@ -1,6 +1,6 @@
 <?php
 
-class CroudiaForPHP {
+class Croudia4PHP {
 	private $client_id;
 	private $client_secret;
 	private $access_token;
