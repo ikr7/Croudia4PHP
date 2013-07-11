@@ -2,7 +2,7 @@
 ##言い訳
 Croudia API をPHPで扱うためのライブラリです。  
 一応、[Croudia REST API 1.0](http://developer.croudia.com/docs/api10)
-にあるエンドポイントは全て扱える…と思いましたが、mentionsが取得できません。~~そのうちなんとかする~~Croudia側での不具合でした
+にあるエンドポイントは全て扱える…と思いましたが、mentionsが取得できません。~~そのうちなんとかする~~ Croudia側での不具合でした
 
 また、refresh_tokenとかその辺のアレも実装してないので、めっちゃトークン切れます。これもそのうちなんとかする  
 
