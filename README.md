@@ -2,9 +2,9 @@
 ##言い訳
 Croudia API をPHPで扱うためのライブラリです。  
 一応、[Croudia REST API 1.0](http://developer.croudia.com/docs/api10)
-にあるエンドポイントは全て扱える…と思いましたが、Croudia側での不具合によりmentionsが取得できません
+にあるエンドポイントは全て扱える…と思いましたが、~~Croudia側での不具合によりmentionsが取得できません
 
-~~また、refresh_tokenとかその辺のアレも実装してないので、めっちゃトークン切れます。これもいつかなんとかする~~  
+また、refresh_tokenとかその辺のアレも実装してないので、めっちゃトークン切れます。これもいつかなんとかする~~  
 
 以上の点により、あまり実用性は無いと思います、テスト程度に使ってください
 
@@ -29,6 +29,8 @@ POST_statuses_update()
 POST_statuses_update_with_media()  
 POST_statuses_spread()  
 POST_statuses_destroy()  
+
+
 
 POST_favorites_create()  
 POST_favorites_destroy()  
