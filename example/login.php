@@ -10,7 +10,7 @@ session_start();
 $ci = "YOUR_CLIENT_KEY";
 $cs = "YOUR_CLIENT_SECRET";
 
-$_SESSION["c4p"] = new CroudiaForPHP($ci, $cs);
+$_SESSION["c4p"] = new Croudia4PHP($ci, $cs);
 $c4p = $_SESSION["c4p"];
 
 //認証用URLをリンクとして表示する
