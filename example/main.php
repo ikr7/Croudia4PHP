@@ -11,7 +11,9 @@ if(!isset($_SESSION["c4p"])){
 
 $c4p = $_SESSION["c4p"];
 
+//ささやいてみよう
 $res = $c4p -> POST_statuses_update(array("status" => "Test Sasayaki."));
 
+//適当デバッグ
 echo "<pre>";
 var_dump($res);
