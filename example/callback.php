@@ -17,7 +17,9 @@ if (!isset($_GET["code"])){
 
 $c4p = $_SESSION["c4p"];
 
+//アクセストークンを取得させる
 $c4p -> getAccessToken($_GET["code"]);
 
+//アプリケーションのメイン画面に移動
 header("Location: main.php");
 exit();
