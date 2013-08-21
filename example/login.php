@@ -1,17 +1,17 @@
 <?php
 
-//ライブラリをrequireしてください.
+//ライブラリ読み込み
 require_once("../croudia4php.php");
 
-//client_id を入れてください, developer.croudia.com で取得できます.
-$ci = "YOUR_CLIENT_ID";
-//client_secret を入れてください, client_id と同時に発行されます.
-$cs = "YOUR_CLIENT_SECRET";
+session_start();
 
-//Croudia4PHPオブジェクトを生成します.
-$c4p = new Croudia4PHP($ci, $cs);
+// Facebookのキー
+$ci = "4d779a25016826d604c7492310719e02936e1d89e420247a0473370a4a733886";
+$cs = "54fb4521c543e2511e166e3a46175d0f20503c7b4150af56b7e5c5243e4decce";
 
-//認証用のURLを取得します.
+$_SESSION["c4p"] = new CroudiaForPHP($ci, $cs);
+$c4p = $_SESSION["c4p"];
+
 $url = $c4p -> getAuthorizeURL();
 
 echo "<a href=\"".$url."\">LOGIN</a>";
