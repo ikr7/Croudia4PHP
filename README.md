@@ -13,10 +13,7 @@ example見ればわかる
 
 getAuthorizeURL()…認証URLを返します  
 getAccessToken()…callbackに渡される code というGETパラメータを渡してアクセストークンをCroudia4PHPオブジェクトにセットします  
-<<<<<<< HEAD
 refreshAccessToken()…アクセストークンを更新します(エラー出たら自動で呼ぶ感じにしたいけどできていない)  
-=======
->>>>>>> 7858c30c6a2941e5f6b916ce7a41318c08884523
   
 public function GET_statuses_public_timeline()  
 public function GET_statuses_home_timeline()  
