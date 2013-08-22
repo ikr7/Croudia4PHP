@@ -6,10 +6,7 @@ require_once("../croudia4php.php");
 //セッション開始
 session_start();
 
-<<<<<<< HEAD
-=======
 // コンシューマキー
->>>>>>> 7858c30c6a2941e5f6b916ce7a41318c08884523
 $ci = "YOUR_CLIENT_KEY";
 $cs = "YOUR_CLIENT_SECRET";
 
