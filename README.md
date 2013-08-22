@@ -13,7 +13,10 @@ example見ればわかる
 
 getAuthorizeURL()…認証URLを返します  
 getAccessToken()…callbackに渡される code というGETパラメータを渡してアクセストークンをCroudia4PHPオブジェクトにセットします  
+<<<<<<< HEAD
 refreshAccessToken()…アクセストークンを更新します(エラー出たら自動で呼ぶ感じにしたいけどできていない)  
+=======
+>>>>>>> 7858c30c6a2941e5f6b916ce7a41318c08884523
   
 public function GET_statuses_public_timeline()  
 public function GET_statuses_home_timeline()  
@@ -42,10 +45,17 @@ public function POST_friendships_destroy()
 public function GET_friendships_show()  
 public function GET_friendships_lookup()  
   
+<<<<<<< HEAD
 public function POST_statuses_spread()    
   
+=======
+>>>>>>> 7858c30c6a2941e5f6b916ce7a41318c08884523
 public function GET_favorites()  
 public function POST_favorites_create()  
 public function POST_favorites_destroy()  
 
+<<<<<<< HEAD
 引数とかについては[Croudia REST API 1.0](http://developer.croudia.com/docs/api10) とかexample見て察して
+=======
+引数とかについては[Croudia REST API 1.0](http://developer.croudia.com/docs/api10) とかexample見て察して
+>>>>>>> 7858c30c6a2941e5f6b916ce7a41318c08884523
