@@ -25,9 +25,8 @@ class Croudia4PHP {
 		);
 		
 		$res = file_get_contents($url, false, stream_context_create($opts));
-		if(!strpos($http_response_header[0], "200")){
-			$this -> refreshAccessToken();
-			$res = file_get_contents($url, false, stream_context_create($opts));
+		if (strpos($http_response_header[0], "200") === false) {
+			return json_decode($res);
 		}
 		return json_decode($res);
 	}
@@ -40,10 +39,10 @@ class Croudia4PHP {
 			"content" => http_build_query($params), 
 			"ignore_errors" => true
 		);
+		
 		$res = file_get_contents($url, false, stream_context_create($opts));
-		if(!strpos($http_response_header[0], "200")){
-			$this -> refreshAccessToken();
-			$res = file_get_contents($url, false, stream_context_create($opts));
+		if (strpos($http_response_header[0], "200") === false) {
+			return json_decode($res);
 		}
 		return json_decode($res);
 	}
@@ -55,13 +54,11 @@ class Croudia4PHP {
 			"client_secret" => $this -> client_secret, 
 			"code" => $code
 		);
-		$res = self::post("https://api.croudia.com/oauth/token", $params);
-		$access_token = $res -> access_token;
-		$refresh_token = $res -> access_token;
-		$this -> access_token = $access_token;
-		$this -> refresh_token = $refresh_token;
 		
-		return $this -> access_token;
+		$res = self::post("https://api.croudia.com/oauth/token", $params);
+		$this -> access_token = $res -> access_token;
+		$this -> refresh_token = $res -> refresh_token;
+		return $res;
 	}
 	
 	public function refreshAccessToken(){
@@ -69,9 +66,17 @@ class Croudia4PHP {
 			"grant_type" => "refresh_token", 
 			"client_id" => $this -> client_id, 
 			"client_secret" => $this -> client_secret, 
-			"refresh_token" => $refresh_token
+			"refresh_token" => $this -> refresh_token
 		);
-		$res = self::post("https://api.croudia.com/oauth/token", $params, $headers);
+		
+		$res = self::post("https://api.croudia.com/oauth/token", $params);
+		$this -> access_token = $res -> access_token;
+		$this -> refresh_token = $res -> refresh_token;
+		return $res;
+	}
+	
+	public function rt(){
+		return $this -> refresh_token;
 	}
 	
 	public function GET_statuses_public_timeline($params = array()){
@@ -257,6 +262,16 @@ class Croudia4PHP {
 			"Authorization: Bearer ".$this -> access_token
 		);
 		$res = self::get("https://api.croudia.com/friendships/lookup.json", $params, $headers);
+		return $res;
+	}
+	
+	public function POST_statuses_spread($params = array()){
+		$headers = array(
+			"Content-type: application/x-www-form-urlencoded", 
+			"Authorization: Bearer ".$this -> access_token
+		);
+		$id = $params["id"];
+		$res = self::post("https://api.croudia.com/statuses/spread/".$id.".json", $params, $headers);
 		return $res;
 	}
 	
