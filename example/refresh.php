@@ -12,7 +12,6 @@ if(!isset($_SESSION["c4p"])){
 $c4p = $_SESSION["c4p"];
 
 $res = $c4p -> refreshAccessToken();
-//$res = $c4p -> rt();
 
 echo "<pre>";
 var_dump($res);
