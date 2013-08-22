@@ -75,10 +75,6 @@ class Croudia4PHP {
 		return $res;
 	}
 	
-	public function rt(){
-		return $this -> refresh_token;
-	}
-	
 	public function GET_statuses_public_timeline($params = array()){
 		$headers = array(
 			"Content-type: application/x-www-form-urlencoded", 
