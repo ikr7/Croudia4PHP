@@ -7,11 +7,8 @@ require_once("../croudia4php.php");
 session_start();
 
 // コンシューマキー
-<<<<<<< HEAD
 $ci = "YOUR_CLIENT_ID";
-=======
 $ci = "YOUR_CLIENT_KEY";
->>>>>>> df168a098bcf16a2d5820bda35b254b442a3033b
 $cs = "YOUR_CLIENT_SECRET";
 
 $_SESSION["c4p"] = new Croudia4PHP($ci, $cs);
