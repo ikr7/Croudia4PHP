@@ -39,6 +39,7 @@ public function GET_users_lookup()
   
 public function GET_account_verify_credentials()  
 public function POST_account_update_profile_image() (未実装です)  
+public function GET_account_update_profile()  
   
 public function POST_friendships_create()  
 public function POST_friendships_destroy()  

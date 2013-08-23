@@ -11,12 +11,9 @@ if(!isset($_SESSION["c4p"])){
 
 $c4p = $_SESSION["c4p"];
 
-<<<<<<< HEAD
-$res = $c4p -> POST_statuses_update(array("status" => "Facebookですよ"));
-=======
 //ささやいてみよう
-$res = $c4p -> POST_statuses_update(array("status" => "Test Sasayaki."));
->>>>>>> 7858c30c6a2941e5f6b916ce7a41318c08884523
+$res = $c4p -> POST_statuses_update(array("status" => "ｱｰてすてす"));
+$res = $c4p -> POST_account_update_profile(array("description" => "ｱｰてすてす"));
 
 //適当デバッグ
 echo "<pre>";
