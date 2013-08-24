@@ -1,11 +1,11 @@
 <?php
 
 class Croudia4PHP {
-	private $client_id;
-	private $client_secret;
-	private $access_token;
-	private $refresh_token;
-	private $headers = array(
+	public $client_id;
+	public $client_secret;
+	public $access_token;
+	public $refresh_token;
+	public $headers = array(
 		"Content-type: application/x-www-form-urlencoded"
 	);
 	
