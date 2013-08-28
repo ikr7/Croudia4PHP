@@ -195,7 +195,7 @@ class Croudia4PHP {
 	}
 	
 	public function GET_friends_ids($params = array()){
-		$res = self::get("https://api.croudia.com/friendships/ids.json", $params);
+		$res = self::get("https://api.croudia.com/friends/ids.json", $params);
 		return $res;
 	}
 	
