@@ -194,6 +194,26 @@ class Croudia4PHP {
 		return $res;
 	}
 	
+	public function GET_friends_ids($params = array()){
+		$res = self::get("https://api.croudia.com/friendships/ids.json", $params);
+		return $res;
+	}
+	
+	public function GET_followers_ids($params = array()){
+		$res = self::get("https://api.croudia.com/followers/ids.json", $params);
+		return $res;
+	}
+	
+	public function GET_friends_list($params = array()){
+		$res = self::get("https://api.croudia.com/friends/list.json", $params);
+		return $res;
+	}
+	
+	public function GET_followers_list($params = array()){
+		$res = self::get("https://api.croudia.com/followers/list.json", $params);
+		return $res;
+	}
+	
 	public function POST_statuses_spread($params = array()){
 		$id = $params["id"];
 		$res = self::post("https://api.croudia.com/statuses/spread/".$id.".json", $params);
