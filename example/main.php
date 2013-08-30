@@ -12,7 +12,7 @@ if(!isset($_SESSION["c4p"])){
 $c4p = $_SESSION["c4p"];
 
 //ささやいてみよう
-$res = $c4p -> POST_statuses_update(array("status" => "PHPを用いた投稿のテスト"));
+$res = $c4p -> POST_statuses_update(array("status" => "投稿テスト"));
 
 //適当デバッグ
 echo "<pre>";
