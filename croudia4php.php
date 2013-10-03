@@ -106,7 +106,7 @@ class Croudia4PHP {
 	}
 	
 	public function POST_statuses_update_with_media($params = array()){
-		//未実装
+		//未実装〜
 		return false;
 	}
 	
