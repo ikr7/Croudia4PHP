@@ -8,7 +8,6 @@ session_start();
 
 // コンシューマキー
 $ci = "YOUR_CLIENT_ID";
-$ci = "YOUR_CLIENT_KEY";
 $cs = "YOUR_CLIENT_SECRET";
 
 $_SESSION["c4p"] = new Croudia4PHP($ci, $cs);
