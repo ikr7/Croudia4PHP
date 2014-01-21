@@ -300,6 +300,23 @@ class Croudia4PHP {
 		$this -> httphead =  $http_response_header;
 		return json_decode($res);
 	}
+    
+    	public function GET_trends_place($params = array()){
+		$headers = array(
+			"Content-type: application/x-www-form-urlencoded", 
+			"Authorization: Bearer ".$this -> access_token
+		);
+		$opts["http"] = array(
+			"method" => "GET", 
+			"header"  =>  implode("\r\n", $headers), 
+			"content" => http_build_query($params)
+		);
+		$res = file_get_contents("https://api.croudia.com/trends/place.json", false, stream_context_create($opts));
+		$this -> httphead=  $http_response_header;
+		return json_decode($res);
+	}
+
+
 	
 }
 	
