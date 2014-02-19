@@ -1,7 +1,12 @@
+
+__*(2013/2/19 追記)*__  
+__*[kimama1997](http://github.com/kimama1997) さんが ほぼ 全APIに対応したバージョンを書いてくれたのでそちらを使ったほうが良いと思う*__  
+>__*[kimama1997/Croudia4PHP](http://github.com/kimama1997/Croudia4PHP)*__
+
 #Croudia4PHP
 Croudia API をPHPで扱うためのライブラリです。  
   
-つかいかたはexample見ればわかる
+使い方はexample見ればわかる
 
 ###メソッドとか
 
